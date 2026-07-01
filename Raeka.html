@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raeka — Birthday Wish</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <div class="top-bar">
+    <img src="images/301-3011725_mosaic-happy-birthday-banner-clipart (1).png" alt="Happy Birthday Banner"/>
+    <a class="back-btn" id="delayed-link" href="BirthdayWishes.html">← Back</a>
+  </div>
+
+  <section class="msg-section">
+    <div class="msg-card">
+      <span class="from-label">a message from</span>
+      <h1>Raeka</h1>
+      <div class="divider"></div>
+      <p>HAPPY BIRTHDAY JUNNN
+THANK YOU FOR ALL THE MEMORIES WE HAVE MADE! YOU ARE SOOOO LOVED AND CARED FOR! HAVE A SWEET 18TH </p>
+    </div>
+  </section>
+
+  <script src="JavaScript/confetti.js"></script>
+  <script src="JavaScript/confettiBG.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const link = document.getElementById('delayed-link');
+      if (link) {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const dest = link.getAttribute('href');
+          document.body.style.opacity = '0';
+          document.body.style.transition = 'opacity 0.6s ease';
+          setTimeout(() => { window.location.href = dest; }, 650);
+        });
+      }
+    });
+  </script>
+
+<img class="scattered-photo r1"  src="images/Raeka/photo_2026-07-01_18-42-02.jpg">
+<img class="scattered-photo r2"  src="images/Raeka/photo_2026-07-01_18-42-01.jpg">
+<img class="scattered-photo r3"  src="images/Raeka/photo_2026-07-01_18-42-14.jpg">
+<img class="scattered-photo r4"  src="images/Raeka/photo_2026-07-01_18-42-13.jpg">
+<img class="scattered-photo r5"  src="images/Raeka/photo_2026-07-01_18-42-08.jpg">
+<img class="scattered-photo r6"  src="images/Raeka/photo_2026-07-01_18-42-07.jpg">
+<img class="scattered-photo r7"  src="images/Raeka/photo_2026-07-01_18-42-06.jpg">
+<img class="scattered-photo r8"  src="images/Raeka/photo_2026-07-01_18-42-05.jpg">
+<img class="scattered-photo r9"  src="images/Raeka/photo_2026-07-01_18-42-04.jpg">
+<img class="scattered-photo r10" src="images/Raeka/photo_2026-07-01_18-42-03.jpg">
+</body>
+</html>

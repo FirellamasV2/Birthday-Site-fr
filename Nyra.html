@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nyra — Birthday Wish</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <div class="top-bar">
+    <img src="images/301-3011725_mosaic-happy-birthday-banner-clipart (1).png" alt="Happy Birthday Banner"/>
+    <a class="back-btn" id="delayed-link" href="BirthdayWishes.html">← Back</a>
+  </div>
+
+  <section class="msg-section">
+    <div class="msg-card">
+      <span class="from-label">a message from</span>
+      <h1>Nyra</h1>
+      <div class="divider"></div>
+      <p>HAPPY BIRTHDAY JUN!! i hope you stay silly and whimsical ^_____^ youre genuinely one of the coolest person ive ever met!!</p>
+    </div>
+  </section>
+
+  <script src="JavaScript/confetti.js"></script>
+  <script src="JavaScript/confettiBG.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const link = document.getElementById('delayed-link');
+      if (link) {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const dest = link.getAttribute('href');
+          document.body.style.opacity = '0';
+          document.body.style.transition = 'opacity 0.6s ease';
+          setTimeout(() => { window.location.href = dest; }, 650);
+        });
+      }
+    });
+  </script>
+
+<img class="scattered-photo n1" src="images/Nyra/photo_2026-07-01_21-38-24.jpg">
+<img class="scattered-photo n2" src="images/Nyra/photo_2026-07-01_21-38-25.jpg">
+<img class="scattered-photo n3" src="images/Nyra/photo_2026-07-01_21-38-20.jpg">
+<img class="scattered-photo n4" src="images/Nyra/photo_2026-07-01_21-38-23.jpg">
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAPPY BIRTHDAY!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+
+    <img class="hero-banner"
+         src="images/301-3011725_mosaic-happy-birthday-banner-clipart (1).png"
+         alt="Happy Birthday Banner"/>
+
+    <h1>
+      Happy<br>Birthday!
+      <span>wishing you the best day ever</span>
+    </h1>
+
+    <a class="hero-btn" id="delayed-link" href="BirthdayWishes.html">
+      🎉 See birthday wishes
+    </a>
+  </section>
+
+  <script src="JavaScript/confetti.js"></script>
+  <script src="JavaScript/confettiBG.js"></script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const link = document.getElementById('delayed-link');
+      if (link) {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const dest = link.getAttribute('href');
+          document.body.style.opacity = '0';
+          document.body.style.transition = 'opacity 0.6s ease';
+          setTimeout(() => { window.location.href = dest; }, 650);
+        });
+      }
+    });
+  </script>
+
+  <audio id="intro-song" src="untitled.mp3"></audio>
+
+  <script>
+    const song = document.getElementById('intro-song');
+    const playDuration = 18000; // Plays for 18 seconds
+
+    function playShortIntro() {
+      song.play().then(() => {
+        // Set timeout to start fading after the play duration
+        setTimeout(() => {
+          let fadeAudio = setInterval(() => {
+            // Decrease volume by a small fraction for a smooth transition
+            if (song.volume > 0.05) {
+              song.volume -= 0.05;
+            } else {
+              // Once it's near silent, clear timer and stop track entirely
+              clearInterval(fadeAudio);
+              song.pause();
+            }
+          }, 100); 
+        }, playDuration);
+      }).catch(error => {
+        console.log("Playback prevented. Waiting for user interaction.");
+      });
+
+      // Prevent the function from triggering again on future clicks
+      document.removeEventListener('click', playShortIntro);
+    }
+
+    // Wait for initial user interaction to trigger audio setup
+    document.addEventListener('click', playShortIntro);
+  </script>
+</body>
+</html>

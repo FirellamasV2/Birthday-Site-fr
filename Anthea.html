@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anthea — Birthday Wish</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <div class="top-bar">
+    <img src="images/301-3011725_mosaic-happy-birthday-banner-clipart (1).png" alt="Happy Birthday Banner"/>
+    <a class="back-btn" id="delayed-link" href="BirthdayWishes.html">← Back</a>
+  </div>
+
+  <section class="msg-section">
+    <div class="msg-card">
+      <span class="from-label">a message from</span>
+      <h1>Anthea</h1>
+      <div class="divider"></div>
+      <p>Happy Birthday Jun😳😲
+
+Thank you for all the memories you have given me in ite so far, I love how you’re always so honest , not afraid of criticism and the way you express yourself so clearly😲. 
+
+I know I can trust you when it comes to looking for a person that i can turn to whenever i need someone to be blatantly honest with me ❤️ Miss when we were in the same class playing dti together it was SO fun 🥹🥹 I love how creative you are and how when you have an idea you wont hesitate to execute it, really shows how determined you are…makes me feel inspired 🤔🤔
+
+To many more memories to come ❤️❤️Happy birthday 🎂</p>
+    </div>
+  </section>
+
+  <script src="JavaScript/confetti.js"></script>
+  <script src="JavaScript/confettiBG.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const link = document.getElementById('delayed-link');
+      if (link) {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const dest = link.getAttribute('href');
+          document.body.style.opacity = '0';
+          document.body.style.transition = 'opacity 0.6s ease';
+          setTimeout(() => { window.location.href = dest; }, 650);
+        });
+      }
+    });
+  </script>
+
+
+<img class="scattered-photo a1"  src="images/Anthea/photo_2026-07-01_18-19-23.jpg">
+<img class="scattered-photo a2"  src="images/Anthea/photo_2026-07-01_18-19-12.jpg">
+<img class="scattered-photo a3"  src="images/Anthea/photo_2026-07-01_18-19-15.jpg">
+<img class="scattered-photo a4"  src="images/Anthea/photo_2026-07-01_18-19-16.jpg">
+<img class="scattered-photo a5"  src="images/Anthea/photo_2026-07-01_18-19-17.jpg">
+<img class="scattered-photo a7"  src="images/Anthea/photo_2026-07-01_18-19-18.jpg">
+<img class="scattered-photo a8"  src="images/Anthea/photo_2026-07-01_18-19-19.jpg">
+<img class="scattered-photo a10" src="images/Anthea/photo_2026-07-01_18-19-20.jpg">
+<img class="scattered-photo a11" src="images/Anthea/photo_2026-07-01_18-19-21.jpg">
+</body>
+</html>

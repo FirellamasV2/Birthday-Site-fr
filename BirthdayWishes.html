@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Wishes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <div class="top-bar">
+    <img src="images/301-3011725_mosaic-happy-birthday-banner-clipart (1).png" alt="Happy Birthday Banner"/>
+    <a class="back-btn" id="delayed-link" href="index.html">← Back</a>
+  </div>
+
+  <div class="page-title">
+    <h1>Birthday<em>Wishes</em></h1>
+    <p>tap a name to read their message</p>
+  </div>
+
+  <div class="name-grid">
+    <a class="name-card" href="Gip.html">Gip</a>
+    <a class="name-card" href="Kashif.html">Kashif</a>
+    <a class="name-card" href="Angeline.html">Angeline</a>
+    <a class="name-card" href="Raeka.html">Raeka</a>
+    <a class="name-card" href="Kasper.html">Kasper</a>
+    <a class="name-card" href="Anthea.html">Anthea</a>
+    <a class="name-card" href="Clare.html">Clare</a>
+    <a class="name-card" href="Gisele2.html">Gisele</a>
+    <a class="name-card" href="Eren.html">Eren</a>
+    <a class="name-card" href="Sage.html">Sage</a>
+    <a class="name-card" href="Jayden.html">Jayden</a>
+    <a class="name-card" href="Nyra.html">Nyra</a>
+  
+  </div>
+
+  <script src="JavaScript/confetti.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const link = document.getElementById('delayed-link');
+      if (link) {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const dest = link.getAttribute('href');
+          document.body.style.opacity = '0';
+          document.body.style.transition = 'opacity 0.6s ease';
+          setTimeout(() => { window.location.href = dest; }, 650);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

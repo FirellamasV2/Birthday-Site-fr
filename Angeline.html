@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angeline — Birthday Wish</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <div class="top-bar">
+    <img src="images/301-3011725_mosaic-happy-birthday-banner-clipart (1).png" alt="Happy Birthday Banner"/>
+    <a class="back-btn" id="delayed-link" href="BirthdayWishes.html">← Back</a>
+  </div>
+
+  <section class="msg-section">
+    <div class="msg-card">
+      <span class="from-label">a message from</span>
+      <h1>Angeline</h1>
+      <div class="divider"></div>
+      <p>HAPPY BIRTHDAY JUN!!
+
+thank you for being such a wonderful close friend of mine since early of last year, we shared so many good memories and had amazing conversations both deep and fun. I’m so happy that we managed to stick together during our acceleration course, having to face the stupid class dramas and overwhelming modules together. We always were together through thick and thin, even having some very deep conversation related to our personal lives and surroundings. Thank you for being the friend who understood me and shared values that we agreed with.
+
+Happy birthday, and let’s work hard til the end 🥺🥺🤍🤍</p>
+    </div>
+  </section>
+
+  <script src="JavaScript/confetti.js"></script>
+  <script src="JavaScript/confettiBG.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const link = document.getElementById('delayed-link');
+      if (link) {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const dest = link.getAttribute('href');
+          document.body.style.opacity = '0';
+          document.body.style.transition = 'opacity 0.6s ease';
+          setTimeout(() => { window.location.href = dest; }, 650);
+        });
+      }
+    });
+  </script>
+
+<img class="scattered-photo p1" src="images/Angeline/photo_2026-07-01_16-55-05.jpg">
+<img class="scattered-photo p2" src="images/Angeline/photo_2026-07-01_16-55-41.jpg">
+<img class="scattered-photo p3" src="images/Angeline/photo_2026-07-01_16-55-43.jpg">
+<img class="scattered-photo p4" src="images/Angeline/photo_2026-07-01_16-55-47.jpg">
+<img class="scattered-photo p5" src="images/Angeline/photo_2026-07-01_16-55-49.jpg">
+<img class="scattered-photo p6" src="images/Angeline/photo_2026-07-01_16-55-53.jpg">
+<img class="scattered-photo p7" src="images/Angeline/photo_2026-07-01_16-56-02.jpg">
+<img class="scattered-photo p8" src="images/Angeline/photo_2026-07-01_16-56-04.jpg">
+<img class="scattered-photo p9" src="images/Angeline/photo_2026-07-01_16-56-07.jpg">
+
+</body>
+</html>

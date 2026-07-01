@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gip — Birthday Wish</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <div class="top-bar">
+    <img src="images/301-3011725_mosaic-happy-birthday-banner-clipart (1).png" alt="Happy Birthday Banner"/>
+    <a class="back-btn" id="delayed-link" href="BirthdayWishes.html">← Back</a>
+  </div>
+
+  <section class="msg-section">
+    <div class="msg-card">
+      <span class="from-label">a message from</span>
+      <h1>Gip</h1>
+      <div class="divider"></div>
+      <video width="320" height="240" controls>
+        <source src="images/Gip/20260701_221157.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <script src="JavaScript/confetti.js"></script>
+  <script src="JavaScript/confettiBG.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const link = document.getElementById('delayed-link');
+      if (link) {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const dest = link.getAttribute('href');
+          document.body.style.opacity = '0';
+          document.body.style.transition = 'opacity 0.6s ease';
+          setTimeout(() => { window.location.href = dest; }, 650);
+        });
+      }
+    });
+  </script>
+
+  <img class="scattered-photo g1" src="images/Gip/WhatsApp Image 2026-07-01 at 22.19.18.jpeg">
+<img class="scattered-photo g2" src="images/Gip/WhatsApp Image 2026-07-01 at 22.19.19.jpeg">
+<img class="scattered-photo g3" src="images/Gip/WhatsApp Image 2026-07-01 at 22.19.20.jpeg">
+<img class="scattered-photo g4" src="images/Gip/WhatsApp Image 2026-07-01 at 22.19.20 (1).jpeg">
+<img class="scattered-photo g5" src="images/Gip/WhatsApp Image 2026-07-01 at 22.19.20 (2).jpeg">
+<img class="scattered-photo g6" src="images/Gip/WhatsApp Image 2026-07-01 at 22.19.21.jpeg">
+<img class="scattered-photo g7" src="images/Gip/WhatsApp Image 2026-07-01 at 22.19.21 (1).jpeg">
+<img class="scattered-photo g8" src="images/Gip/WhatsApp Image 2026-07-01 at 22.19.22.jpeg">
+</body>
+</html>

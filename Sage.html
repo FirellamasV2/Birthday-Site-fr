@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sage — Birthday Wish</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <div class="top-bar">
+    <img src="images/301-3011725_mosaic-happy-birthday-banner-clipart (1).png" alt="Happy Birthday Banner"/>
+    <a class="back-btn" id="delayed-link" href="BirthdayWishes.html">← Back</a>
+  </div>
+
+  <section class="msg-section">
+    <div class="msg-card">
+      <span class="from-label">a message from</span>
+      <h1>Sage</h1>
+      <div class="divider"></div>
+      <p>Happpy birtfdauyyy junzers , thanks for being my friend I honestly didn’t think we’d be this close tbh and I still remember when we first met at pink dot the most gayest place to meet ever, going out with you was really fun I enjoyed myself a lot and playing ow with you was fun too !! Before I met you I honestly thought you didn’t like me but I’m so glad we’re close to each other now !! I genuinely wish you all the best in you life and to always be happy forever !!! Luv you</p>
+    </div>
+  </section>
+
+  <script src="JavaScript/confetti.js"></script>
+  <script src="JavaScript/confettiBG.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const link = document.getElementById('delayed-link');
+      if (link) {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const dest = link.getAttribute('href');
+          document.body.style.opacity = '0';
+          document.body.style.transition = 'opacity 0.6s ease';
+          setTimeout(() => { window.location.href = dest; }, 650);
+        });
+      }
+    });
+  </script>
+
+<img class="scattered-photo s1" src="images/Sage/Sage3.jpg">
+<img class="scattered-photo s2" src="images/Sage/sage4.jpg">
+<img class="scattered-photo s3" src="images/Sage/Sage5.jpg">
+<img class="scattered-photo s4" src="images/Sage/sage6.jpg">
+<img class="scattered-photo s5" src="images/Sage/image.jpg">
+<img class="scattered-photo s6" src="images/Sage/sage2.jpg">
+</body>
+</html>
